@@ -3,6 +3,9 @@ import Home from "./Home";
 import Posts from "./Posts";
 import About from "./About";
 import PostInfo from "./PostInfo";
+import CreatePost from "./CreatePost";
+import Edit from "./Edit";
+import Search from "./Search";
 const Navbar = ()=>{
     return(
         <div>
@@ -19,10 +22,16 @@ const Navbar = ()=>{
                                   <Link to="/" className="nav-link active" >Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                  <Link to="/posts" className="nav-link" href="#">Posts</Link>
+                                  <Link to="/posts" className="nav-link" >Posts</Link>
                                 </li>
                                 <li className="nav-item">
-                                  <Link to="/about" className="nav-link" href="#">About</Link>
+                                  <Link to="/search" className="nav-link" >Search</Link>
+                                </li>
+                                <li className="nav-item">
+                                  <Link to="/about" className="nav-link" >About</Link>
+                                </li>
+                                <li className="nav-item">
+                                  <Link to="/create" className="nav-link" >New Post</Link>
                                 </li>
                             </ul>
                             <form className="d-flex" role="search">
@@ -36,6 +45,9 @@ const Navbar = ()=>{
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="/posts" element={<Posts/>}></Route>
                     <Route path="/posts/:id" element={<PostInfo/>}></Route>
+                    <Route path="/search" element={<Search />}></Route>
+                    <Route path="/create" element={<CreatePost/>}></Route>
+                    <Route path="/edit/:id" element={<Edit/>}></Route>
                     <Route path="/about" element={<About/>}></Route>
                 </Routes>
             </BrowserRouter>

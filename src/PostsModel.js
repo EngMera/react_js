@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
  
 const PostsModel  = (url)=> {
@@ -6,10 +7,9 @@ const PostsModel  = (url)=> {
     const [isWaiting,setIsWaiting]= useState(true);
     const [serverError,setServerError]= useState(null);
     const [posts,setPosts] = useState(null);
-    const deleteAction =(id)=>{
-            const updatePost = posts.filter(post=> post.id !== id);
-            setPosts(updatePost);
-    }
+    const navigator = useNavigate();
+
+   
      
 
     useEffect(()=>{
@@ -36,7 +36,7 @@ const PostsModel  = (url)=> {
      },[url]);
 
 
-     return{isWaiting,serverError,posts,deleteAction};
+     return{isWaiting,serverError,posts};
 }
 
 export default PostsModel ;

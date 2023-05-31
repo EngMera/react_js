@@ -8,7 +8,7 @@ const About = ()=>{
     }
 
     return(
-        <div>
+        <div className="container mt-5">
           <h3 className="alert alert-primary">{name} </h3>
           <button type="button" onClick={changeNme} className="btn btn-primary">Primary</button>
         </div>

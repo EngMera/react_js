@@ -3,7 +3,7 @@ import PostsModel  from "./PostsModel";
 
 const PostInfo = ()=>{
     const {id} = useParams();
-    const {isWaiting,serverError,posts,deleteAction} = PostsModel('https://jsonplaceholder.typicode.com/posts/'+id);
+    const {isWaiting,serverError,posts} = PostsModel('https://jsonplaceholder.typicode.com/posts/'+id);
     // console.log(posts);
     return(
         <div className="container mt-5">

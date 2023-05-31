@@ -7,9 +7,9 @@ const Home  = ()=> {
         
     }
     return (
-        <div className="">
+        <div className="container mt-5 text-center">
            <h2 className="alert alert-success" id="home">Home page Here</h2>
-           <button type="button" onClick={clickMe} className="btn btn-primary">Primary</button>
+           <button type="button" onClick={clickMe} className="btn btn-primary mx-2">Primary</button>
            <button type="button" onClick={(e)=>clickDanger('mera',e)} className="btn btn-danger">danger</button>
         </div>
     );
